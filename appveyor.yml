@@ -9,9 +9,6 @@ build: off
 
 install:
   - chmod +x gradlew
-  # Сначала устанавливаем зависимости и проверяем сборку
-  - ./gradlew assemble
 
 test_script:
-  # Запускаем тесты
   - ./gradlew test --info
