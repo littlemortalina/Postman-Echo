@@ -9,6 +9,7 @@ build: off
 
 install:
   - chmod +x gradlew
+  - ./gradlew dependencies --refresh-dependencies
 
 test_script:
-  - ./gradlew test --info
+  - ./gradlew test --info --refresh-dependencies
