@@ -1,17 +1,11 @@
 image: Ubuntu2004
 stack: jdk 11
 
-branches:
-  only:
-    - main
-
-build: off
-
 install:
-  - sudo apt-get update
+  - sudo apt-get update -y
   - sudo apt-get install -y ca-certificates
+  - sudo update-ca-certificates --fresh
   - chmod +x gradlew
-  - ./gradlew dependencies --refresh-dependencies
 
 test_script:
-  - ./gradlew test --info --refresh-dependencies
+  - ./gradlew test --info
