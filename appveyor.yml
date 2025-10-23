@@ -9,7 +9,9 @@ build: off
 
 install:
   - chmod +x gradlew
-  - ./gradlew dependencies --refresh-dependencies
+  # Сначала устанавливаем зависимости и проверяем сборку
+  - ./gradlew assemble
 
 test_script:
-  - ./gradlew test --info --refresh-dependencies
+  # Запускаем тесты
+  - ./gradlew test --info
